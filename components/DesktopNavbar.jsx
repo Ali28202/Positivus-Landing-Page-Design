@@ -6,7 +6,7 @@ export default function DesktopNavbar() {
 				<Link href={"/"}>
 					<img src="logo-black.png" alt="logo" />
 				</Link>
-				<ul className="font-grotesk flex items-center gap-10">
+				<ul className="flex items-center gap-10">
 					<li>
 						<Link href={"/"}>About us</Link>
 					</li>
