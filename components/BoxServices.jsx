@@ -3,10 +3,10 @@ export default function BoxServices({ title, titleColor, bgColor, imgSrc }) {
 	return (
 		<>
 			<div
-				className="flex gap-10 items-center !px-8 py-8 rounded-[2rem] w-[35%] border-[#191A23] border-[1px] border-b-4"
+				className="flex items-center xl:justify-normal justify-center xl:px-8 xl:py-8 px-8 py-6 rounded-[2rem] xl:w-[35%] w-fit border-[#191A23] border-[1px] border-b-4"
 				style={{ backgroundColor: bgColor }}
 			>
-				<div className="flex flex-col gap-20">
+				<div className="flex flex-col gap-16">
 					<h1
 						className="p-1 rounded-lg w-48 pl-2 h-fit text-2xl font-medium"
 						style={{ backgroundColor: titleColor }}
@@ -22,12 +22,12 @@ export default function BoxServices({ title, titleColor, bgColor, imgSrc }) {
 							}
 							alt="arrow"
 						/>
-						<h2 className="text-xl" style={{ color: h2Color }}>
+						<h2 className="text-xl xl:block hidden" style={{ color: h2Color }}>
 							Learn More
 						</h2>
 					</button>
 				</div>
-				<img src={imgSrc} alt="img" />
+				<img src={imgSrc} alt="img" className="xl:w-fit w-32 xl:m-0 mt-24" />
 			</div>
 		</>
 	);
