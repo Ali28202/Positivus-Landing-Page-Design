@@ -1,4 +1,31 @@
+"use client";
+
+import { motion, animate, useMotionValue } from "framer-motion";
+import { useEffect } from "react";
+import useMeasure from "react-use-measure";
 export default function DesktopHero() {
+	const images = [
+		"amazon-logo.png",
+		"dribble-logo.png",
+		"hubspot-logo.png",
+		"notion-logo.png",
+		"netflix-logo.png",
+		"zoom-logo.png",
+	];
+	let [ref, { width }] = useMeasure();
+	const x = useMotionValue(0);
+	useEffect(() => {
+		let control;
+		let finalposition = -width / 2 - 8;
+		control = animate(x, [0, finalposition], {
+			ease: "linear",
+			duration: 25,
+			repeat: Infinity,
+			repeatType: "loop",
+			repeatDelay: 10,
+		});
+		return control.stop();
+	}, [x, width]);
 	return (
 		<>
 			<div className="xl:flex hidden justify-between px-24">
@@ -17,6 +44,25 @@ export default function DesktopHero() {
 				</div>
 				<img src="hero-img.png" alt="heroimg" />
 			</div>
+			{/* Animation Still Have problem */}
+			<motion.div
+				className="flex items-center justify-center py-10 gap-20 overflow-hidden"
+				ref={ref}
+				style={{ x: x }}
+			>
+				{[...images, ...images].map((t, index) => {
+					return (
+						<>
+							<img
+								src={t}
+								alt={t}
+								key={index}
+								className="mix-blend-luminosity"
+							/>
+						</>
+					);
+				})}
+			</motion.div>
 		</>
 	);
 }
