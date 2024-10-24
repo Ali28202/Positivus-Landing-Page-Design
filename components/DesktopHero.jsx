@@ -1,6 +1,10 @@
 "use client";
-
-import { motion, animate, useMotionValue } from "framer-motion";
+import {
+	motion,
+	animate,
+	useMotionValue,
+	AnimatePresence,
+} from "framer-motion";
 import { useEffect } from "react";
 import useMeasure from "react-use-measure";
 export default function DesktopHero() {
@@ -12,20 +16,20 @@ export default function DesktopHero() {
 		"netflix-logo.png",
 		"zoom-logo.png",
 	];
-	let [ref, { width }] = useMeasure();
-	const x = useMotionValue(0);
-	useEffect(() => {
-		let control;
-		let finalposition = -width / 2 - 8;
-		control = animate(x, [0, finalposition], {
-			ease: "linear",
-			duration: 25,
-			repeat: Infinity,
-			repeatType: "loop",
-			repeatDelay: 10,
-		});
-		return control.stop();
-	}, [x, width]);
+	// let [ref, { width }] = useMeasure();
+	// const x = useMotionValue(0);
+	// useEffect(() => {
+	// 	let control;
+	// 	let finalposition = -width / 2 - 8;
+	// 	control = animate(x, [0, finalposition], {
+	// 		ease: "linear",
+	// 		duration: 25,
+	// 		repeat: Infinity,
+	// 		repeatType: "loop",
+	// 		repeatDelay: 0,
+	// 	});
+	// 	return () => control.stop();
+	// }, [x, width]);
 	return (
 		<>
 			<div className="xl:flex hidden justify-between px-24">
@@ -45,8 +49,8 @@ export default function DesktopHero() {
 				<img src="hero-img.png" alt="heroimg" />
 			</div>
 			{/* Animation Still Have problem */}
-			<motion.div
-				className="flex items-center justify-center py-10 gap-20 overflow-hidden"
+			{/* <motion.div
+				className="flex items-center justify-center gap-20 py-10"
 				ref={ref}
 				style={{ x: x }}
 			>
@@ -62,7 +66,7 @@ export default function DesktopHero() {
 						</>
 					);
 				})}
-			</motion.div>
+			</motion.div> */}
 		</>
 	);
 }
