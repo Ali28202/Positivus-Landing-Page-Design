@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 export default function DesktopNavbar() {
 	const titles = [
@@ -17,7 +16,7 @@ export default function DesktopNavbar() {
 				<ul className="flex items-center gap-10">
 					{titles.map((t) => {
 						return (
-							<li key={t}>
+							<li key={t.title}>
 								<Link href={t.href}>{t.title}</Link>
 							</li>
 						);
