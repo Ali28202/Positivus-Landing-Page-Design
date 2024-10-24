@@ -40,17 +40,17 @@ export default function Services() {
 	];
 	return (
 		<>
-			<div className="px-24 py-12 flex gap-8">
-				<h1 className="bg-[#B9FF66] rounded-lg inline-block p-1 font-medium text-4xl">
+			<div className="sm:px-24 py-12 flex sm:flex-row flex-col justify-center items-center sm:justify-start gap-8">
+				<h1 className="bg-[#B9FF66] rounded-lg p-1 font-medium text-4xl w-fit">
 					Services
 				</h1>
-				<p className="text-base w-[32rem]">
+				<p className="text-base xl:w-[32rem] w-96 sm:text-left text-center">
 					At our digital marketing agency, we offer a range of services to help
 					businesses grow and succeed online. These services include:
 				</p>
 			</div>
-			<div className="flex flex-col gap-10">
-				<div className="flex justify-center gap-5">
+			<div className="flex flex-col xl:gap-10 gap-5 justify-center items-center">
+				<div className="flex xl:flex-row flex-col gap-5">
 					<BoxServices
 						key={boxes[0].title}
 						title={boxes[0].title}
@@ -66,7 +66,7 @@ export default function Services() {
 						imgSrc={boxes[1].imgSrc}
 					/>
 				</div>
-				<div className="flex justify-center gap-5">
+				<div className="flex xl:flex-row flex-col justify-center gap-5">
 					<BoxServices
 						key={boxes[2].title}
 						title={boxes[2].title}
@@ -82,7 +82,7 @@ export default function Services() {
 						imgSrc={boxes[3].imgSrc}
 					/>
 				</div>
-				<div className="flex justify-center gap-5">
+				<div className="flex xl:flex-row flex-col justify-center gap-5">
 					<BoxServices
 						key={boxes[4].title}
 						title={boxes[4].title}
