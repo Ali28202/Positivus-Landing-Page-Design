@@ -6,8 +6,7 @@ import {
 	AnimatePresence,
 } from "framer-motion";
 import { useEffect } from "react";
-import useMeasure from "react-use-measure";
-export default function DesktopHero() {
+export default function DesktopHero(e) {
 	const images = [
 		"amazon-logo.png",
 		"dribble-logo.png",
@@ -16,11 +15,10 @@ export default function DesktopHero() {
 		"netflix-logo.png",
 		"zoom-logo.png",
 	];
-	// let [ref, { width }] = useMeasure();
 	// const x = useMotionValue(0);
 	// useEffect(() => {
 	// 	let control;
-	// 	let finalposition = -width / 2 - 8;
+	// 	let finalposition = -window.innerWidth / 2 - 8;
 	// 	control = animate(x, [0, finalposition], {
 	// 		ease: "linear",
 	// 		duration: 25,
@@ -29,7 +27,7 @@ export default function DesktopHero() {
 	// 		repeatDelay: 0,
 	// 	});
 	// 	return () => control.stop();
-	// }, [x, width]);
+	// }, [x]);
 	return (
 		<>
 			<div className="xl:flex hidden justify-between px-24">
