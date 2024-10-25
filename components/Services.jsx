@@ -66,7 +66,7 @@ export default function Services() {
 						imgSrc={boxes[1].imgSrc}
 					/>
 				</div>
-				<div className="flex xl:flex-row flex-col justify-center gap-5">
+				<div className="flex xl:flex-row flex-col gap-5">
 					<BoxServices
 						key={boxes[2].title}
 						title={boxes[2].title}
@@ -82,7 +82,7 @@ export default function Services() {
 						imgSrc={boxes[3].imgSrc}
 					/>
 				</div>
-				<div className="flex xl:flex-row flex-col justify-center gap-5">
+				<div className="flex xl:flex-row flex-col gap-5">
 					<BoxServices
 						key={boxes[4].title}
 						title={boxes[4].title}
