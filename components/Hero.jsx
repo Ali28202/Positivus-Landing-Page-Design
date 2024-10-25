@@ -3,8 +3,10 @@ import MobileHero from "./MobileHero";
 export default function Hero() {
 	return (
 		<>
-			<DesktopHero />
-			<MobileHero />
+			<div className="overflow-hidden">
+				<DesktopHero className={"xl:flex hidden"} />
+				<MobileHero className={"xl:hidden flex"} />
+			</div>
 		</>
 	);
 }

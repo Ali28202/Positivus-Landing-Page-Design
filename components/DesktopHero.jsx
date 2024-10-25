@@ -1,12 +1,6 @@
 "use client";
-import {
-	motion,
-	animate,
-	useMotionValue,
-	AnimatePresence,
-} from "framer-motion";
-import { useEffect } from "react";
-export default function DesktopHero(e) {
+import { motion } from "framer-motion";
+export default function DesktopHero({ className }) {
 	const images = [
 		"amazon-logo.png",
 		"dribble-logo.png",
@@ -15,22 +9,10 @@ export default function DesktopHero(e) {
 		"netflix-logo.png",
 		"zoom-logo.png",
 	];
-	// const x = useMotionValue(0);
-	// useEffect(() => {
-	// 	let control;
-	// 	let finalposition = -window.innerWidth / 2 - 8;
-	// 	control = animate(x, [0, finalposition], {
-	// 		ease: "linear",
-	// 		duration: 25,
-	// 		repeat: Infinity,
-	// 		repeatType: "loop",
-	// 		repeatDelay: 0,
-	// 	});
-	// 	return () => control.stop();
-	// }, [x]);
+	const finalposition = -window.innerWidth + 387;
 	return (
 		<>
-			<div className="xl:flex hidden justify-between px-24">
+			<div className={`${className} justify-between px-24`}>
 				<div className="flex items-start flex-col gap-8">
 					<h1 className="w-[32rem] text-6xl font-medium leading-tight">
 						Navigating the digital landscape for success
@@ -47,24 +29,21 @@ export default function DesktopHero(e) {
 				<img src="hero-img.png" alt="heroimg" />
 			</div>
 			{/* Animation Still Have problem */}
-			{/* <motion.div
-				className="flex items-center justify-center gap-20 py-10"
-				ref={ref}
-				style={{ x: x }}
+			<motion.div
+				className={`${className} items-center justify-center gap-16 py-10 mix-blend-luminosity px-20 w-max`}
+				animate={{ x: [0, finalposition] }}
+				transition={{
+					ease: "linear",
+					duration: 25,
+					repeat: Infinity,
+					repeatType: "loop",
+					repeatDelay: 0,
+				}}
 			>
-				{[...images, ...images].map((t, index) => {
-					return (
-						<>
-							<img
-								src={t}
-								alt={t}
-								key={index}
-								className="mix-blend-luminosity"
-							/>
-						</>
-					);
+				{[...images, ...images, ...images].map((t, index) => {
+					return <img src={t} alt={t} key={index} />;
 				})}
-			</motion.div> */}
+			</motion.div>
 		</>
 	);
 }
