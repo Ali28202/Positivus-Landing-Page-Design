@@ -19,11 +19,14 @@ export default function Navbar() {
 					{titles.map((t) => {
 						return (
 							<li key={t.title}>
-								<Link href={t.href}>{t.title}</Link>
+								<Link href={t.href} className="group">
+									{t.title}
+									<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 mt-1 bg-[#191a23]"></span>
+								</Link>
 							</li>
 						);
 					})}
-					<button className="border-2 border-black rounded-xl py-4 px-8">
+					<button className="border-2 border-black rounded-xl py-4 px-8 hover:bg-[#191a23] hover:text-white duration-300">
 						Request a quote
 					</button>
 				</ul>
