@@ -1,6 +1,6 @@
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
-import Cta from "@/components/Cta";
+import CTA from "@/components/CTA";
 import CaseStudies from "@/components/CaseStudies";
 import OurWorkingProcess from "@/components/OurWorkingProcess";
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
 		<>
 			<Hero />
 			<Services />
-			<Cta />
+			<CTA />
 			<CaseStudies />
 			<OurWorkingProcess />
 		</>
