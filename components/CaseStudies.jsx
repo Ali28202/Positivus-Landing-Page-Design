@@ -17,7 +17,7 @@ export default function CaseStudies() {
 	const ref = useRef(null);
 	return (
 		<div className="overflow-hidden">
-			<div className="sm:px-24 py-12 flex sm:flex-row flex-col justify-center items-center sm:justify-start gap-8">
+			<div className="sm:px-24 py-8 flex sm:flex-row flex-col justify-center items-center sm:justify-start gap-8">
 				<h1 className="bg-[#B9FF66] rounded-lg p-1 font-medium text-4xl w-fit">
 					Case Studies
 				</h1>
@@ -56,7 +56,7 @@ function EachCase({ text }) {
 	return (
 		<div className="flex flex-col gap-5 w-72">
 			<p className="text-lg text-white">{text}</p>
-			<button className="flex items-center gap-3">
+			<button className="flex items-center gap-3 hover:opacity-85 duration-300">
 				<h2 className="text-xl block text-[#b9ff66]">Learn More</h2>
 				<img src={"arrow-green.png"} alt="arrow" />
 			</button>
