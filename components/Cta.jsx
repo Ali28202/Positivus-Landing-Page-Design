@@ -1,7 +1,7 @@
 export default function Cta() {
 	return (
 		<>
-			<div className="flex items-center justify-center py-24">
+			<div className="flex items-center justify-center xl:py-24 py-16">
 				<div className="xl:w-[80%] w-[90%] xl:px-16 xl:py-14 px-10 py-10 bg-[#f3f3f3] rounded-[30px] flex items-center justify-between">
 					<div className="flex flex-col gap-8 w-[26rem]">
 						<h1 className="font-medium text-3xl">Let’s make things happen</h1>
