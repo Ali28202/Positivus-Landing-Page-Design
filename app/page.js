@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Cta from "@/components/Cta";
 import CaseStudies from "@/components/CaseStudies";
+import OurWorkingProcess from "@/components/OurWorkingProcess";
 export default function Home() {
 	return (
 		<>
@@ -9,6 +10,7 @@ export default function Home() {
 			<Services />
 			<Cta />
 			<CaseStudies />
+			<OurWorkingProcess />
 		</>
 	);
 }
