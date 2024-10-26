@@ -58,7 +58,7 @@ export default function Hero() {
 							online through a range of services including SEO, PPC, social
 							media marketing, and content creation.
 						</p>
-						<button className="bg-[#191a23] text-xl text-white rounded-xl py-4 w-full">
+						<button className="bg-[#191a23] text-xl text-white rounded-xl py-4 w-full hover:bg-[#b9ff66] border-[1px] border-black hover:text-black duration-300">
 							Book a consultation
 						</button>
 					</div>
