@@ -1,4 +1,4 @@
-export default function Cta() {
+export default function CTA() {
 	return (
 		<>
 			<div className="flex items-center justify-center xl:py-24 py-16">
