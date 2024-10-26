@@ -42,7 +42,6 @@ export default function CaseStudies() {
 					className="flex w-max gap-4"
 					drag="x"
 					dragConstraints={ref}
-					onMeasureDragConstraints={console.log}
 				>
 					{texts.map((t) => (
 						<BoxCaseStudies text={t} key={t} />
