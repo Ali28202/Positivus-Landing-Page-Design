@@ -1,4 +1,7 @@
+"use client";
+import { motion } from "framer-motion";
 import BoxCaseStudies from "./BoxCaseStudies";
+import { useRef } from "react";
 export default function CaseStudies() {
 	const texts = [
 		`For a local restaurant, we implemented a targeted PPC campaign
@@ -11,6 +14,7 @@ export default function CaseStudies() {
 		campaign that increased followers by 25% and generated a 20%
 		increase in online sales.`,
 	];
+	const ref = useRef(null);
 	return (
 		<div className="overflow-hidden">
 			<div className="sm:px-24 py-12 flex sm:flex-row flex-col justify-center items-center sm:justify-start gap-8">
@@ -33,12 +37,17 @@ export default function CaseStudies() {
 				</div>
 			</div>
 			{/* Mobile */}
-			<div className="ml-3">
-				<div className="flex w-max gap-4">
+			<div className="ml-3" ref={ref}>
+				<motion.div
+					className="flex w-max gap-4"
+					drag="x"
+					dragConstraints={ref}
+					onMeasureDragConstraints={console.log}
+				>
 					{texts.map((t) => (
 						<BoxCaseStudies text={t} key={t} />
 					))}
-				</div>
+				</motion.div>
 			</div>
 		</div>
 	);
