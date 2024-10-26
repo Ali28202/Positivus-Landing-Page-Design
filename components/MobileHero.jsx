@@ -10,7 +10,7 @@ export default function MobileHero({ className }) {
 		"netflix-logo.png",
 		"zoom-logo.png",
 	];
-	const finalposition = -window.innerWidth * 2 - 167;
+	const finalposition = -1005;
 	return (
 		<>
 			<div className={`${className}`}>
@@ -34,7 +34,7 @@ export default function MobileHero({ className }) {
 				animate={{ x: [0, finalposition] }}
 				transition={{
 					ease: "linear",
-					duration: 10,
+					duration: 30,
 					repeat: Infinity,
 					repeatType: "loop",
 					repeatDelay: 0,

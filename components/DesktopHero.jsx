@@ -9,7 +9,7 @@ export default function DesktopHero({ className }) {
 		"netflix-logo.png",
 		"zoom-logo.png",
 	];
-	const finalposition = -window.innerWidth + 387;
+	const finalposition = -1150;
 	return (
 		<>
 			<div className={`${className} justify-between px-24`}>
@@ -22,19 +22,18 @@ export default function DesktopHero({ className }) {
 						online through a range of services including SEO, PPC, social media
 						marketing, and content creation.
 					</p>
-					<button className="bg-black text-white rounded-xl py-4 px-8">
+					<button className="bg-[#191a23] text-white rounded-xl py-4 px-8">
 						Book a consultation
 					</button>
 				</div>
 				<img src="hero-img.png" alt="heroimg" />
 			</div>
-			{/* Animation Still Have problem */}
 			<motion.div
 				className={`${className} items-center justify-center gap-16 py-10 mix-blend-luminosity px-20 w-max`}
 				animate={{ x: [0, finalposition] }}
 				transition={{
 					ease: "linear",
-					duration: 25,
+					duration: 30,
 					repeat: Infinity,
 					repeatType: "loop",
 					repeatDelay: 0,
