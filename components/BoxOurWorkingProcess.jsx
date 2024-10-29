@@ -1,31 +1,19 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import { motion, animate, motionValue } from "framer-motion";
+import { useState } from "react";
+import { motion } from "framer-motion";
 export default function BoxOurWorkingProcess({ key, title, index }) {
 	const [isOpen, setIsOpen] = useState(() => false);
-	let bgColor = isOpen ? motionValue("#B9FF66") : motionValue("#f3f3f3");
-	const ref = useRef(null);
-	const hasPageBeenRendered = useRef(true);
-	useEffect(() => {
-		if (hasPageBeenRendered.current) {
-			return;
-		}
-		isOpen
-			? animate(ref, { backgroundColor: [bgColor, "#f3f3f3"] }, { duration: 3 })
-			: animate(
-					ref,
-					{ backgroundColor: [bgColor, "#B9FF66"] },
-					{ duration: 3 }
-			  );
-		hasPageBeenRendered.current = true;
-	}, [hasPageBeenRendered, ref, isOpen, bgColor]);
+	const variants = {
+		open: { backgroundColor: "#b9ff66" },
+		closed: { backgroundColor: "#f3f3f3" },
+	};
 	return (
 		<>
 			<motion.div
-				className="xl:mx-24 mx-auto w-[85%] rounded-[45px] xl:px-16 xl:py-12 py-7 px-7 border-[#191A23] border-[1px] border-b-4"
-				style={{ backgroundColor: bgColor }}
-				ref={ref}
+				className="xl:mx-24 mx-auto w-[85%] bg-[#f3f3f3] rounded-[45px] xl:px-16 xl:py-12 py-7 px-7 border-[#191A23] border-[1px] border-b-4"
 				key={key}
+				animate={isOpen ? "open" : "closed"}
+				variants={variants}
 			>
 				<div className="flex items-center justify-between">
 					<div className="flex items-center xl:gap-8 gap-4">
@@ -38,7 +26,7 @@ export default function BoxOurWorkingProcess({ key, title, index }) {
 						src={isOpen ? "minus-button.png" : "plus-button.png"}
 						alt="button"
 						className="cursor-pointer xl:w-fit w-8"
-						onClick={() => setIsOpen(!isOpen)}
+						onClick={() => setIsOpen((isOpen) => !isOpen)}
 					/>
 				</div>
 				{isOpen && (
