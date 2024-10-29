@@ -38,11 +38,7 @@ export default function CaseStudies() {
 			</div>
 			{/* Mobile */}
 			<div className="ml-3" ref={ref}>
-				<motion.div
-					className="flex w-max gap-4"
-					drag="x"
-					dragConstraints={ref}
-				>
+        <motion.div className="flex w-max gap-4" drag="x" dragConstraints={ref}>
 					{texts.map((t) => (
 						<BoxCaseStudies text={t} key={t} />
 					))}
