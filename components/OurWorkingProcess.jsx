@@ -18,7 +18,7 @@ export default function OurWorkingProcess() {
 					Step-by-Step Guide to Achieving Your Business Goals
 				</p>
 			</div>
-			<div className="flex flex-col gap-5">
+			<div className="flex flex-col gap-5 xl:py-10 py-5">
 				{titles.map((t, index) => {
 					return <BoxOurWorkingProcess key={index} title={t} index={index} />;
 				})}
