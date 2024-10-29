@@ -43,7 +43,7 @@ export default function Services() {
 					businesses grow and succeed online. These services include:
 				</p>
 			</div>
-			<div className="flex flex-col xl:gap-10 gap-5 justify-center xl:px-28 xl:items-start items-center">
+			<div className="flex flex-col xl:gap-10 gap-8 justify-center xl:px-28 xl:items-start items-center">
 				<div className="flex xl:flex-row flex-col xl:gap-14 gap-8">
 					<BoxServices
 						title={boxes[0].title}
