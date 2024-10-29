@@ -1,3 +1,4 @@
+"use client";
 import TeamMember from "./TeamMember";
 export default function Team() {
 	const members = [
@@ -44,6 +45,7 @@ export default function Team() {
 			src: "member-6.png",
 		},
 	];
+	let width = window.innerWidth;
 	return (
 		<>
 			<div className="sm:px-24 py-12 flex sm:flex-row flex-col justify-center items-center sm:justify-start gap-8">
@@ -56,17 +58,29 @@ export default function Team() {
 				</p>
 			</div>
 			<div className="xl:px-24 px-8 flex gap-8 flex-wrap">
-				{members.map((m, index) => {
-					return (
-						<TeamMember
-							key={index}
-							name={m.name}
-							job={m.job}
-							resume={m.resume}
-							src={m.src}
-						/>
-					);
-				})}
+				{width == 1440
+					? members.map((m, index) => {
+							return (
+								<TeamMember
+									key={index}
+									name={m.name}
+									job={m.job}
+									resume={m.resume}
+									src={m.src}
+								/>
+							);
+					  })
+					: members.slice(0, 4).map((m, index) => {
+							return (
+								<TeamMember
+									key={index}
+									name={m.name}
+									job={m.job}
+									resume={m.resume}
+									src={m.src}
+								/>
+							);
+					  })}
 			</div>
 			<div className="flex justify-end items-end xl:mx-32 xl:my-10 my-7 xl:px-0 px-8">
 				<button className="bg-[#191a23] xl:w-fit w-full text-white rounded-xl py-4 px-8 xl:px-14 hover:bg-[#b9ff66] border-[1px] border-black hover:text-black duration-300">
