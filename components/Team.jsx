@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import TeamMember from "./TeamMember";
 export default function Team() {
 	const members = [
@@ -45,7 +46,12 @@ export default function Team() {
 			src: "member-6.png",
 		},
 	];
-	let width = window.innerWidth;
+	const [width, setWidth] = useState(window.innerWidth);
+	useEffect(() => {
+		const handleResize = () => setWidth(window.innerWidth);
+		window.addEventListener("resize", handleResize);
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
 	return (
 		<>
 			<div className="sm:px-24 py-12 flex sm:flex-row flex-col justify-center items-center sm:justify-start gap-8">
