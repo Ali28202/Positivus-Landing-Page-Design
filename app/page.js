@@ -3,6 +3,7 @@ import Services from "@/components/Services";
 import CTA from "@/components/CTA";
 import CaseStudies from "@/components/CaseStudies";
 import OurWorkingProcess from "@/components/OurWorkingProcess";
+import Team from "@/components/Team";
 export default function Home() {
 	return (
 		<>
@@ -11,6 +12,7 @@ export default function Home() {
 			<CTA />
 			<CaseStudies />
 			<OurWorkingProcess />
+			<Team />
 		</>
 	);
 }
