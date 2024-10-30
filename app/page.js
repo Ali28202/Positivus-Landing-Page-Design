@@ -5,6 +5,7 @@ import CaseStudies from "@/components/CaseStudies";
 import OurWorkingProcess from "@/components/OurWorkingProcess";
 import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
+import ContactUs from "@/components/ContactUs";
 export default function Home() {
 	return (
 		<>
@@ -15,6 +16,7 @@ export default function Home() {
 			<OurWorkingProcess />
 			<Team />
 			<Testimonials />
+			<ContactUs />
 		</>
 	);
 }
