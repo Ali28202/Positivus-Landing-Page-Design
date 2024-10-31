@@ -37,7 +37,7 @@ export default function Testimonials() {
 						className="rotate-180 cursor-pointer"
 						onClick={() => {
 							if (x != 0 && width == 1440) x += 655;
-							else if (width == 425) x += 400;
+							else if (x != 0 && width == 425) x += 400;
 							setLocation((location) => {
 								let idx = location.indexOf(1);
 								if (idx == 0) {
