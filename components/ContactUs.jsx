@@ -50,6 +50,8 @@ export default function ContactUs() {
 								type="text"
 								className="xl:w-[30rem] w-full border-[1px] border-black rounded-2xl px-6 py-4"
 								placeholder="Name"
+								name="Name"
+								autoComplete="name"
 							/>
 						</div>
 						<div className="flex flex-col gap-3 mb-5">
@@ -58,6 +60,8 @@ export default function ContactUs() {
 								type="email"
 								className="xl:w-[30rem] w-full border-[1px] border-black rounded-2xl px-6 py-4"
 								placeholder="Email"
+								name="Email"
+								autoComplete="email"
 							/>
 						</div>
 						<div className="flex flex-col gap-3">
@@ -65,6 +69,7 @@ export default function ContactUs() {
 							<textarea
 								className="xl:w-[30rem] w-full xl:h-48 h-36 border-[1px] border-black rounded-2xl px-6 pt-6"
 								placeholder="Message"
+								name="Message"
 							/>
 						</div>
 						<button className="xl:block hidden bg-[#191a23] text-xl text-white rounded-xl py-4 xl:w-[30rem] w-full mt-8 hover:bg-[#b9ff66] border-[1px] border-black hover:text-black duration-300">
