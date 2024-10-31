@@ -4,10 +4,11 @@ import MassageBubble from "./MassageBubble";
 import { useState } from "react";
 let x = 0;
 export default function Testimonials() {
-	const [next, toggleNext] = useState(false);
 	const [location, setLocation] = useState([1, 0, 0, 0, 0]);
 	let nextOpacity = location[4] ? "0.4" : "1";
 	let backOpacity = location[0] ? "0.4" : "1";
+	let nextCursor = nextOpacity == "0.4" ? "default" : "pointer";
+	let backCursor = backOpacity == "0.4" ? "default" : "pointer";
 	let width = window.innerWidth;
 	return (
 		<>
@@ -28,17 +29,15 @@ export default function Testimonials() {
 					<MassageBubble />
 					<MassageBubble />
 					<MassageBubble />
-					<MassageBubble />
 				</motion.div>
 				<div className="flex xl:gap-5 gap-12 xl:mt-32 mt-14 xl:mx-80 justify-center xl:justify-between items-center">
 					<img
 						src="arrow-right-white.png"
 						alt="arrow-left"
-						className="rotate-180"
+						className="rotate-180 cursor-pointer"
 						onClick={() => {
 							if (x != 0 && width == 1440) x += 655;
 							else if (width == 425) x += 400;
-							toggleNext(false);
 							setLocation((location) => {
 								let idx = location.indexOf(1);
 								if (idx == 0) {
@@ -50,7 +49,7 @@ export default function Testimonials() {
 								return location;
 							});
 						}}
-						style={{ opacity: backOpacity }}
+						style={{ opacity: backOpacity, cursor: backCursor }}
 					/>
 					<div className="flex gap-5 h-4">
 						<img
@@ -97,10 +96,10 @@ export default function Testimonials() {
 					<img
 						src="arrow-right-white.png"
 						alt="arrow-left"
+						className="cursor-pointer"
 						onClick={() => {
 							if (x != -2620 && width == 1440) x -= 655;
 							else if (x != -1600 && width == 425) x -= 400;
-							toggleNext(true);
 							setLocation((location) => {
 								let idx = location.indexOf(1);
 								if (idx == 4) {
@@ -112,7 +111,7 @@ export default function Testimonials() {
 								return location;
 							});
 						}}
-						style={{ opacity: nextOpacity }}
+						style={{ opacity: nextOpacity, cursor: nextCursor }}
 					/>
 				</div>
 			</div>
