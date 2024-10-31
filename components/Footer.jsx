@@ -11,8 +11,8 @@ export default function Footer() {
 		<>
 			{/* Mobile */}
 			<div className="bg-[#191a23] w-full mt-24 px-5 pt-14 pb-7 block xl:hidden">
-				<div className="flex flex-col items-center justify-center gap-14">
-					<img src="logo-white.png" alt="logo" />
+				<div className="flex flex-col items-center justify-center gap-10">
+					<img src="logo-white.png" alt="logo" className="w-44" />
 					<ul className="text-white flex flex-col gap-5 items-center text-lg">
 						{titles.map((t) => {
 							return (
@@ -25,7 +25,7 @@ export default function Footer() {
 				</div>
 				<div className="flex flex-col justify-center items-center mt-12">
 					<div className="text-white flex flex-col items-center justify-center gap-6 text-base">
-						<h1 className="bg-[#b9ff66] w-fit px-2 rounded-md font-medium !text-lg !text-black mb-5">
+						<h1 className="bg-[#b9ff66] w-fit px-2 rounded-md font-medium !text-lg !text-black mb-3">
 							Contact us:
 						</h1>
 						<h2>Email: info@positivus.com</h2>
