@@ -13,7 +13,7 @@ export default function ContactUs() {
 					Connect with Us: Let's Discuss Your Digital Marketing Needs
 				</p>
 			</div>
-			<div className="bg-[#f3f3f3] xl:mx-24 mx-8 rounded-[50px] w-[85%] xl:pl-28 px-5 xL:py-14 py-10 xl:flex xl:justify-between">
+			<div className="bg-[#f3f3f3] xl:mx-24 mx-8 rounded-[50px] w-[85%] xl:pl-28 xl:px-0 px-5 xL:py-16 py-10 xl:flex xl:justify-between">
 				<div>
 					<div className="flex gap-10 px-4">
 						<div className="flex xl:gap-5 gap-3 items-center">
