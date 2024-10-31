@@ -12,7 +12,9 @@ export default function Footer() {
 			{/* Mobile */}
 			<div className="bg-[#191a23] w-full mt-24 px-5 pt-14 pb-7 block xl:hidden">
 				<div className="flex flex-col items-center justify-center gap-10">
-					<img src="logo-white.png" alt="logo" className="w-44" />
+					<Link href={"/"}>
+						<img src="logo-white.png" alt="logo" className="w-44" />
+					</Link>
 					<ul className="text-white flex flex-col gap-5 items-center text-lg">
 						{titles.map((t) => {
 							return (
@@ -68,7 +70,9 @@ export default function Footer() {
 			{/* Desktop */}
 			<div className="bg-[#191a23] w-[85%] mx-24 rounded-tr-3xl rounded-tl-3xl px-16 pt-14 pb-12 xl:block hidden">
 				<div className="flex items-center justify-between">
-					<img src="logo-white.png" alt="logo" />
+					<Link href={"/"}>
+						<img src="logo-white.png" alt="logo" />
+					</Link>
 					<ul className="text-white flex gap-10 underline underline-offset-2 text-lg">
 						{titles.map((t) => {
 							return (
