@@ -18,7 +18,7 @@ export default function Footer() {
 					<ul className="text-white flex flex-col gap-5 items-center text-lg">
 						{titles.map((t) => {
 							return (
-								<Link href={t.title} key={t.title}>
+								<Link href={t.href} key={t.title}>
 									<li>{t.title}</li>
 								</Link>
 							);

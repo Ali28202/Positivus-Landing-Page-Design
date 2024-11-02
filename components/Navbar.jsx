@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
-export default function Navbar() {
+import Sheet from "./Sheet";
+export default function Navbar({ isOpen, setIsOpen }) {
 	const titles = [
 		{ title: "About us", href: "/" },
 		{ title: "Services", href: "/" },
@@ -32,12 +33,18 @@ export default function Navbar() {
 				</ul>
 			</div>
 			{/* Mobile */}
+			<div className="xl:hidden block">
+				<Sheet titles={titles} isOpen={isOpen} setIsOpen={setIsOpen} />
+			</div>
 			<div className="xl:hidden flex py-8 px-5 items-center justify-between">
 				<Link href={"/"}>
 					<img src="logo-black.png" alt="logo" className="w-36" />
 				</Link>
 				<Link href={"/"}>
-					<RxHamburgerMenu className="text-2xl" />
+					<RxHamburgerMenu
+						className="text-2xl"
+						onClick={() => setIsOpen(true)}
+					/>
 				</Link>
 			</div>
 		</>
