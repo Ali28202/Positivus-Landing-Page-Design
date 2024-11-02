@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function TeamMember({ name, job, resume, src }) {
 	return (
 		<>
@@ -10,11 +11,13 @@ export default function TeamMember({ name, job, resume, src }) {
 							<h2 className="text-base">{job}</h2>
 						</div>
 					</div>
-					<img
-						src="linkedin-green.png"
-						alt="linkedin"
-						className="w-fit h-fit"
-					/>
+					<Link href={"/"}>
+						<img
+							src="linkedin-green.png"
+							alt="linkedin"
+							className="w-fit h-fit cursor-pointer"
+						/>
+					</Link>
 				</div>
 				<div className="flex flex-col">
 					<span className="w-full h-0.5 bg-black xl:my-5 my-5"></span>
