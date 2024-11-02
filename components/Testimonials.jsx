@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import MassageBubble from "./MassageBubble";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 let x = 0;
 export default function Testimonials() {
 	const [location, setLocation] = useState([1, 0, 0, 0, 0]);
@@ -9,7 +9,16 @@ export default function Testimonials() {
 	let backOpacity = location[0] ? "0.4" : "1";
 	let nextCursor = nextOpacity == "0.4" ? "default" : "pointer";
 	let backCursor = backOpacity == "0.4" ? "default" : "pointer";
-	let width = window.innerWidth;
+	const [width, setWidth] = useState(window.innerWidth);
+	useEffect(() => {
+		const handleResize = () => {
+			setLocation([1, 0, 0, 0, 0]);
+			x = 0;
+			setWidth(window.innerWidth);
+		};
+		window.addEventListener("resize", handleResize);
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
 	return (
 		<>
 			<div className="sm:px-24 py-8 flex sm:flex-row flex-col justify-center items-center sm:justify-start gap-8">

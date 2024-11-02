@@ -15,11 +15,8 @@ export default function ContactUs() {
 			</div>
 			<div className="bg-[#f3f3f3] xl:mx-24 mx-8 rounded-[50px] w-[85%] xl:pl-28 xl:px-0 px-5 xL:py-16 py-10 xl:flex xl:justify-between xl:mb-36">
 				<div>
-					<div className="flex gap-10 px-4 mt-5">
-						<div
-							className="flex xl:gap-5 gap-3 items-center"
-							onClick={() => setIsActive(false)}
-						>
+					<div className="flex gap-10 pl-6">
+						<div className="flex xl:gap-5 gap-3 items-center">
 							<img
 								src={
 									isActive
@@ -28,13 +25,11 @@ export default function ContactUs() {
 								}
 								alt="radioactive"
 								className="cursor-pointer"
+								onClick={() => setIsActive(false)}
 							/>
 							<h1 className="xl:text-lg text-base">Say Hi</h1>
 						</div>
-						<div
-							className="flex xl:gap-5 gap-3 items-center"
-							onClick={() => setIsActive(true)}
-						>
+						<div className="flex xl:gap-5 gap-3 items-center">
 							<img
 								src={
 									isActive
@@ -43,6 +38,7 @@ export default function ContactUs() {
 								}
 								alt="radionotactive"
 								className="cursor-pointer"
+								onClick={() => setIsActive(true)}
 							/>
 							<h1 className="xl:text-lg text-base">Get a Quote</h1>
 						</div>

@@ -53,9 +53,15 @@ export default function Footer() {
 					</div>
 				</div>
 				<div className="flex items-center justify-center mt-10 gap-5">
-					<img src="linkedin-white.png" alt="linkedin" />
-					<img src="facebook-white.png" alt="facebook" />
-					<img src="twitter-white.png" alt="twitter" />
+					<Link href={"/"}>
+						<img src="linkedin-white.png" alt="linkedin" />
+					</Link>
+					<Link href={"/"}>
+						<img src="facebook-white.png" alt="facebook" />
+					</Link>
+					<Link href={"/"}>
+						<img src="twitter-white.png" alt="twitter" />
+					</Link>
 				</div>
 				<div className="flex flex-col">
 					<span className="h-0.5 w-full bg-white/50 my-10"></span>
