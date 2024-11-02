@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-export default function BoxOurWorkingProcess({ key, title, index }) {
+export default function BoxOurWorkingProcess({ title, index }) {
 	const [isOpen, setIsOpen] = useState(() => false);
 	const variants = {
 		open: { backgroundColor: "#b9ff66" },
@@ -11,7 +11,6 @@ export default function BoxOurWorkingProcess({ key, title, index }) {
 		<>
 			<motion.div
 				className="xl:mx-24 mx-auto w-[85%] bg-[#f3f3f3] rounded-[45px] xl:px-16 xl:py-12 py-7 px-7 border-[#191A23] border-[1px] border-b-4"
-				key={key}
 				animate={isOpen ? "open" : "closed"}
 				transition={{ duration: 0.3 }}
 				variants={variants}

@@ -20,7 +20,7 @@ export default function OurWorkingProcess() {
 			</div>
 			<div className="flex flex-col gap-5 xl:py-10 py-5">
 				{titles.map((t, index) => {
-					return <BoxOurWorkingProcess key={index} title={t} index={index} />;
+					return <BoxOurWorkingProcess title={t} index={index} key={index} />;
 				})}
 			</div>
 		</>
