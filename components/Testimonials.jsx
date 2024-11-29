@@ -9,7 +9,7 @@ export default function Testimonials() {
 	let backOpacity = location[0] ? "0.4" : "1";
 	let nextCursor = nextOpacity == "0.4" ? "default" : "pointer";
 	let backCursor = backOpacity == "0.4" ? "default" : "pointer";
-	const [width, setWidth] = useState(window.innerWidth);
+	const [width, setWidth] = useState(1440);
 	useEffect(() => {
 		const handleResize = () => {
 			setLocation([1, 0, 0, 0, 0]);
@@ -46,7 +46,7 @@ export default function Testimonials() {
 						className="rotate-180 cursor-pointer"
 						onClick={() => {
 							if (x != 0 && width == 1440) x += 655;
-							else if (x != 0 && width == 425) x += 400;
+							else if (x != 0 && width < 500) x += 400;
 							setLocation((location) => {
 								let idx = location.indexOf(1);
 								if (idx == 0) {
@@ -108,7 +108,7 @@ export default function Testimonials() {
 						className="cursor-pointer"
 						onClick={() => {
 							if (x != -2620 && width == 1440) x -= 655;
-							else if (x != -1600 && width == 425) x -= 400;
+							else if (x != -1600 && width < 500) x -= 400;
 							setLocation((location) => {
 								let idx = location.indexOf(1);
 								if (idx == 4) {
